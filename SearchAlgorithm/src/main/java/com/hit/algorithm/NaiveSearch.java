@@ -1,26 +1,33 @@
 package com.hit.algorithm;
 
 public class NaiveSearch implements IAlgoSearch {
-	public void Search(String str, String pattern) 
+	public void Search(String pat, String txt) 
     { 
-        int n = str.length(); 
-        int m = pattern.length(); 
-        
-        for (int s = 0; s <= n - m; s++) { 
-            int j; 
-            for (j = 0; j < m; j++) 
-                if (str.charAt(s + j) != pattern.charAt(j)) 
-                    break; 
-            if (j == m) 
-                System.out.println("Pattern occurs at index " + s); 
-        } 
+		int M = pat.length();
+        int N = txt.length();
+ 
+        /* A loop to slide pat one by one */
+        for (int i = 0; i <= N - M; i++) {
+ 
+            int j;
+ 
+            /* For current index i, check for pattern
+              match */
+            for (j = 0; j < M; j++)
+                if (txt.charAt(i + j) != pat.charAt(j))
+                    break;
+ 
+            if (j == M) // if pat[0...M-1] = txt[i, i+1, ...i+M-1]
+                System.out.println("Pattern found at index " + i);
+        }
     } 
   
     public static void main(String[] args) 
     { 
         String txt = "AABAACAADAABAAABAA"; 
         String pat = "AABA"; 
-        Search(txt, pat); 
+        new NaiveSearch().Search(pat, txt);
+        //O(mn)
     } 
 
 }

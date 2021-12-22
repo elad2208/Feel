@@ -7,7 +7,8 @@ public class ZSearch implements IAlgoSearch{
 	 
 	    //  prints all occurrences of pattern in text using
 	    // Z algo
-	    public void Search (String text, String pattern)
+	    
+	    public void Search (String pattern, String text)
 	    {
 	 
 	        // Create concatenated string "P$T"
@@ -98,10 +99,10 @@ public class ZSearch implements IAlgoSearch{
 	     
 	    public static void main(String[] args)
 	    {
-	        String text = "GEEKS FOR GEEKS";
-	        String pattern = "GEEK";
+	        String txt = "GEEKS FOR GEEKS";
+	        String pat = "GEEK";
 	 
-	        Search(text, pattern);
+	        new ZSearch().Search(pat, txt);
 	    }
 	
 }

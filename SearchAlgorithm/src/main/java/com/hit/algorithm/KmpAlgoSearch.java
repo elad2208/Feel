@@ -1,7 +1,7 @@
 package com.hit.algorithm;
 
 public class KmpAlgoSearch implements IAlgoSearch{
-    public void Search( String txt,String pat)
+    public void Search( String pat,String txt)
     {
         int M = pat.length();
         int N = txt.length();
@@ -79,6 +79,7 @@ public class KmpAlgoSearch implements IAlgoSearch{
         String txt = "ABABDABACDABABCABAB";
         String pat = "ABABCABAB";
         new KmpAlgoSearch().Search(pat, txt);
+        //O(n+k)
     }
 
 	
