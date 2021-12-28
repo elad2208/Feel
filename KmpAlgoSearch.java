@@ -1,7 +1,5 @@
-package com.hit.algorithm;
-
-class KmpAlgoSearch{
-    void KMPSearch(String pat, String txt)
+public class KmpAlgoSearch{
+    public void KMPSearch(String pat, String txt)
     {
         int M = pat.length();
         int N = txt.length();
@@ -73,11 +71,8 @@ class KmpAlgoSearch{
         }
     }
   
-    // Driver program to test above function
-    public static void main(String args[])
-    {
-        String txt = "ABABDABACDABABCABAB";
-        String pat = "ABABCABAB";
-        new KmpAlgoSearch().KMPSearch(pat, txt);
-    }
+
 }
+
+
+

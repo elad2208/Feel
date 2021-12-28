@@ -1,7 +1,7 @@
 package com.hit.algorithm;
 
 public class KmpAlgoSearch implements IAlgoSearch{
-    public void Search( String pat,String txt)
+     public boolean Search( String pat,String txt)
     {
         int M = pat.length();
         int N = txt.length();
@@ -22,9 +22,10 @@ public class KmpAlgoSearch implements IAlgoSearch{
                 i++;
             }
             if (j == M) {
-                System.out.println("Found pattern "
-                                   + "at index " + (i - j));
-                j = lps[j - 1];
+            	j = lps[j - 1]; // this was after the console log
+            	return true;
+//                System.out.println("Found pattern "
+//                                   + "at index " + (i - j));
             }
   
             // mismatch after j matches
@@ -37,6 +38,7 @@ public class KmpAlgoSearch implements IAlgoSearch{
                     i = i + 1;
             }
         }
+        return false;
     }
   
     void computeLPSArray(String pat, int M, int lps[])
@@ -72,15 +74,8 @@ public class KmpAlgoSearch implements IAlgoSearch{
             }
         }
     }
-  
-    // Driver program to test above function
-    public static void main(String args[])
-    {
-        String txt = "ABABDABACDABABCABAB";
-        String pat = "ABABCABAB";
-        new KmpAlgoSearch().Search(pat, txt);
-        //O(n+k)
-    }
+
+    
 
 	
 }

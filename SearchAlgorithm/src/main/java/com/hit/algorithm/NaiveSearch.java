@@ -1,7 +1,7 @@
 package com.hit.algorithm;
 
 public class NaiveSearch implements IAlgoSearch {
-	public void Search(String pat, String txt) 
+	public boolean Search(String pat, String txt) 
     { 
 		int M = pat.length();
         int N = txt.length();
@@ -18,8 +18,10 @@ public class NaiveSearch implements IAlgoSearch {
                     break;
  
             if (j == M) // if pat[0...M-1] = txt[i, i+1, ...i+M-1]
-                System.out.println("Pattern found at index " + i);
+            	return true;
+//                System.out.println("Pattern found at index " + i);
         }
+        return false;
     } 
   
     public static void main(String[] args) 

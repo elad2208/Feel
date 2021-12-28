@@ -1,7 +1,7 @@
 package com.hit.algorithm;
 
-public class NaiveSearch {
-	public static void search(String str, String pattern) 
+public class NaiveSearch implements IAlgoSearch {
+	public boolean Search(String str, String pattern) 
     { 
         int n = str.length(); 
         int m = pattern.length(); 
@@ -12,15 +12,11 @@ public class NaiveSearch {
                 if (str.charAt(s + j) != pattern.charAt(j)) 
                     break; 
             if (j == m) 
-                System.out.println("Pattern occurs at index " + s); 
+            	return true;
+                //System.out.println("Pattern occurs at index " + s); 
         } 
+        return false;
     } 
   
-    public static void main(String[] args) 
-    { 
-        String txt = "AABAACAADAABAAABAA"; 
-        String pat = "AABA"; 
-        search(txt, pat); 
-    } 
 
 }
