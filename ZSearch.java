@@ -1,13 +1,13 @@
 package com.hit.algorithm;
 
-public class ZSearch {
+public class ZSearch implements IAlgoSearch {
 
 	// A Java program that implements Z algorithm for pattern
 	// searching
 	 
 	    //  prints all occurrences of pattern in text using
 	    // Z algo
-	    public static void search(String text, String pattern)
+	    public static void Search(String text, String pattern)
 	    {
 	 
 	        // Create concatenated string "P$T"
@@ -93,13 +93,6 @@ public class ZSearch {
 	        }
 	    }
 	     
-	    // Driver program
-	    public static void main(String[] args)
-	    {
-	        String text = "GEEKS FOR GEEKS";
-	        String pattern = "GEEK";
-	 
-	        search(text, pattern);
-	    }
+
 	
 }

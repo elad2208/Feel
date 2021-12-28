@@ -8,7 +8,7 @@ public class ZSearch implements IAlgoSearch{
 	    //  prints all occurrences of pattern in text using
 	    // Z algo
 	    
-	    public void Search (String pattern, String text)
+	    public boolean Search (String pattern, String text)
 	    {
 	 
 	        // Create concatenated string "P$T"
@@ -28,10 +28,12 @@ public class ZSearch implements IAlgoSearch{
 	            // length we got the pattern
 	 
 	            if(Z[i] == pattern.length()){
-	                System.out.println("Pattern found at index "
-	                              + (i - pattern.length() - 1));
+	            	return true;
+	              //  System.out.println("Pattern found at index "
+	              //                + (i - pattern.length() - 1));
 	            }
 	        }
+	        return false;
 	    }
 	 
 	    // Fills Z array for given string str[]
@@ -95,14 +97,5 @@ public class ZSearch implements IAlgoSearch{
 	    }
 	     
 	    
-	      // Driver program
-	     
-	    public static void main(String[] args)
-	    {
-	        String txt = "GEEKS FOR GEEKS";
-	        String pat = "GEEK";
-	 
-	        new ZSearch().Search(pat, txt);
-	    }
 	
 }
