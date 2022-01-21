@@ -1,20 +1,37 @@
 package com.hit.service;
+
 import com.hit.dao.DjDaoImpl;
-import com.hit.dao.IDao;
 import com.hit.dao.UserDaoImpl;
 import com.hit.dm.Dj;
 import com.hit.dm.User;
-//import lib.SearchAlgoModule;
+
+@SuppressWarnings("unused")
 public class DjService {
 	
-	DjDaoImpl djDao= new DjDaoImpl();
-	UserDaoImpl userDao= new UserDaoImpl();
-	//Search
+	DjDaoImpl djDao;
+	UserDaoImpl userDao;
 	
-	public List<Dj> getAllUserDjs(Long id){
-		User user=userDao.find(id);
-		return djDao.getAllByName(user.getName());
+	public DjService(DjDaoImpl djDao, UserDaoImpl userDao) {
+		this.djDao = djDao;
+		this.userDao = userDao;
 	}
 	
-
+	public void addNewDj(Dj dj) {
+		djDao.save(dj);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
