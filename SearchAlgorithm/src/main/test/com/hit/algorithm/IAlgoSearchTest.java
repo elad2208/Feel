@@ -2,8 +2,8 @@ package com.hit.algorithm;
 import com.hit.algorithm.KmpAlgoSearch;
 import com.hit.algorithm.NaiveSearch;
 import com.hit.algorithm.ZSearch;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 
@@ -19,17 +19,17 @@ public class IAlgoSearchTest {
         String subs2 = "d11";
         String subs3 = "as22";
         
-        assertTrue(new KmpAlgoSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo");   
-        assertTrue(new NaiveSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo");   
-        assertTrue(new ZSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo");   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo", new KmpAlgoSearch().Search(subs1, s1));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo", new NaiveSearch().Search(subs1, s1));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo", new ZSearch().Search(subs1, s1));   
     
-        assertTrue(new KmpAlgoSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo");   
-        assertTrue(new NaiveSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo");   
-        assertTrue(new ZSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo");   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo", new KmpAlgoSearch().Search(subs2, s2));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo", new NaiveSearch().Search(subs2, s2));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo", new ZSearch().Search(subs2, s2));   
     
-        assertTrue(new KmpAlgoSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo");   
-        assertTrue(new NaiveSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo");   
-        assertTrue(new ZSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo");   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the KMP Algo", new KmpAlgoSearch().Search(subs3, s3));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Naive Algo", new NaiveSearch().Search(subs3, s3));   
+        assertTrue("Error! you have an end case here, sum string sopposed to be True but didn't passed the Z Algo", new ZSearch().Search(subs3, s3));   
     
 	}
 
@@ -43,17 +43,17 @@ public class IAlgoSearchTest {
         String subs2 = "d11a";
         String subs3 = "asddd";
 
-        assertFalse(new KmpAlgoSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo");   
-        assertFalse(new NaiveSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo");   
-        assertFalse(new ZSearch().Search(subs1, s1), () -> "Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo"); 
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo", new KmpAlgoSearch().Search(subs1, s1));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo", new NaiveSearch().Search(subs1, s1));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo", new ZSearch().Search(subs1, s1)); 
 	
-        assertFalse(new KmpAlgoSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo");   
-        assertFalse(new NaiveSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo");   
-        assertFalse(new ZSearch().Search(subs2, s2), () -> "Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo"); 
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo", new KmpAlgoSearch().Search(subs2, s2));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo", new NaiveSearch().Search(subs2, s2));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo", new ZSearch().Search(subs2, s2)); 
 	
-        assertFalse(new KmpAlgoSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo");   
-        assertFalse(new NaiveSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo");   
-        assertFalse(new ZSearch().Search(subs3, s3), () -> "Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo"); 
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the KMP Algo", new KmpAlgoSearch().Search(subs3, s3));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but passed the Naive Algo", new NaiveSearch().Search(subs3, s3));   
+        assertFalse("Error! you have an end case here, sum string sopposed to be False but didn't passed the Z Algo", new ZSearch().Search(subs3, s3)); 
 	
 	}
 	

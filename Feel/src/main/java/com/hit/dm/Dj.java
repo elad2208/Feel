@@ -10,6 +10,7 @@ public class Dj implements java.io.Serializable {
 	private String nickName;
 	private Long id;
 	private String genre;
+	private Boolean hired;
 	private float price_hour;
 	public Dj() {}
 	
@@ -18,6 +19,10 @@ public class Dj implements java.io.Serializable {
 		this.nickName = nickName;
 		this.genre = genre;
 		
+	}
+	
+	public void setHired(Boolean hired) {
+		this.hired = hired;
 	}
 
 	public Long getId() {
