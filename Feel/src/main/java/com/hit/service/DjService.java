@@ -18,20 +18,13 @@ public class DjService {
 	
 	public void addNewDj(Dj dj) {
 		djDao.save(dj);
+	}	
+	
+	public Dj hireDj(Long DjId, Long UserId) {
+		Dj dj = djDao.find(DjId);
+		if(dj == null)
+			return null;
+		dj.setHired(true);
+		return dj;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
